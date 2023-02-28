@@ -1,0 +1,38 @@
+main .about-container {
+  padding: 0;
+}
+
+.about-wrapper .about {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.about-card-wrapper a picture img {
+  border: 1px solid #c7c7c7;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+.about-card-body {
+  text-align: center;
+}
+.about-card-body p {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.about-card-wrapper > p:first-child {
+  margin-top: 0;
+}
+.rating-div span {
+  padding: 0.2rem;
+  color: #ccc;
+}
+.checked {
+  color: #000 !important;
+}
+@media (max-width: 992px) {
+  .about-wrapper {
+    padding: 0px 16px;
+  }
+}

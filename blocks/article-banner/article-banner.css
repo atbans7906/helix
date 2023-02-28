@@ -1,0 +1,6 @@
+main .article-banner {
+  padding: 0;
+}
+main .article-banner > div {
+  max-width: unset;
+}

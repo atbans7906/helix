@@ -13,6 +13,8 @@ header nav {
   height: var(--nav-height);
   box-sizing: border-box;
   font-family: var(--body-font-family);
+  background: #000;
+  color: #fff;
 }
 
 header nav a:any-link {
@@ -21,7 +23,7 @@ header nav a:any-link {
 
 header nav[aria-expanded='true'] {
   grid-template: 'hamburger brand' 'sections sections' 'tools tools';
-  grid-template-columns:  56px 1fr;
+  grid-template-columns: 56px 1fr;
   overflow-y: scroll;
   min-height: 100vh;
 }
@@ -36,6 +38,8 @@ header .nav-brand {
 
 header nav .nav-brand p {
   margin: 0;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 header nav .nav-brand img {
@@ -98,11 +102,11 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::before {
   transform: rotate(45deg);
   border-radius: 5px;
   top: 8px;
-  left: 1px
+  left: 1px;
 }
 
 header nav[aria-expanded='true'] .nav-hamburger-icon::after {
-  transform: rotate(-45deg)
+  transform: rotate(-45deg);
 }
 
 /* sections */
@@ -114,16 +118,18 @@ header nav .nav-sections {
   flex: 1 1 auto;
 }
 
-header nav .nav-sections ul  {
+header nav .nav-sections ul {
   font-size: 16px;
   font-weight: 500;
   list-style: none;
   padding-left: 0;
-} 
+}
 
 header nav .nav-sections li {
   font-size: 20px;
   font-weight: 500;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 header nav[aria-expanded='true'] .nav-sections {
@@ -201,7 +207,7 @@ header nav[aria-expanded='true'] .nav-tools li {
     width: unset;
     margin: 0;
   }
-  
+
   header nav[aria-expanded='true'] .nav-sections ol {
     display: flex;
     min-height: unset;
@@ -231,17 +237,16 @@ header nav[aria-expanded='true'] .nav-tools li {
   }
 
   header nav .nav-sections > ul > li > ul::before {
-    content: '';
+    /* content: ''; */
     width: 0;
     height: 0;
     position: absolute;
     border-left: 15px solid transparent;
-    border-right: 15px solid transparent;    
+    border-right: 15px solid transparent;
     border-bottom: 15px solid var(--highlight-background-color);
     top: -15px;
     left: 20px;
   }
-
 
   header nav .nav-sections > ul > li > ul > li {
     font-size: 18px;
@@ -251,7 +256,7 @@ header nav[aria-expanded='true'] .nav-tools li {
   header nav .nav-sections > ul > li[aria-expanded='true'] ul {
     display: block;
     position: absolute;
-    background-color: var(--highlight-background-color);
+    background-color: #333;
     width: 300px;
     left: 0;
     padding: 16px;
